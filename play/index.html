@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penguin Out — ice puzzle game</title>
+<meta name="description" content="Penguin Out: slide Iggy out of 200 icy puzzles. Out now on Google Play.">
+<style>
+  :root {
+    --night: #16142a;
+    --deep: #25244a;
+    --ice: #9ef4ff;
+    --ice-dim: #81cbd8;
+    --red: #e8413c;
+    --snow: #f4f7ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--night) 0%, var(--deep) 100%);
+    color: var(--snow);
+    font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    text-align: center;
+  }
+  main { width: 100%; max-width: 420px; }
+  .logo {
+    width: 266px;
+    max-width: 80%;
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto 8px;
+  }
+  .iggy {
+    width: 96px;
+    height: 120px;
+    margin: 8px auto 20px;
+    background: url(iggy.png) 0 0 / 400% 100% no-repeat;
+    image-rendering: pixelated;
+    animation: hop .6s steps(3) infinite alternate;
+  }
+  @keyframes hop { to { background-position: 100% 0; } }
+  p { margin: 0 0 28px; color: var(--ice-dim); }
+  p strong { color: var(--snow); font-weight: 600; }
+  .play {
+    display: block;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: var(--ice);
+    color: var(--night);
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 var(--ice-dim);
+  }
+  .play:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--ice-dim); }
+  .small { margin-top: 18px; font-size: 13px; color: var(--ice-dim); opacity: .8; }
+  .small a { color: var(--ice-dim); }
+  @media (prefers-reduced-motion: reduce) { .iggy { animation: none; } }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.png" alt="Penguin Out">
+  <div class="iggy" role="img" aria-label="Iggy the penguin"></div>
+  <p><strong>Slide Iggy out of 200 icy puzzles.</strong><br>He only stops when something stops him.</p>
+  <a class="play" href="https://play.google.com/store/apps/details?id=com.morynstudios.penguinout&amp;referrer=utm_source%3Dinstagram%26utm_medium%3Dbio_page">Get it on Google Play</a>
+  <div class="small">Free on Android · <a href="../penguin-out/">Privacy policy</a></div>
+</main>
+</body>
+</html>
